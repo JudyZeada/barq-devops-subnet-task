@@ -123,12 +123,12 @@ def export_reports(result_df, grouped_df,output_dir='output'):
         # Export detailed results
         network_details_path = os.path.join(output_dir, 'ip_network_details.csv')
         result_df.to_csv(network_details_path, index=False)
-        print("Detailed report saved as '{network_details_path}'")
+        print("Detailed report saved as 'ip_network_details.csv'")
         
         # Export grouped results
         summary_csv_path = os.path.join(output_dir,'subnet_summarry.csv')
         grouped_df.to_csv(summary_csv_path, index=False)
-        print("Subnet summary saved as '{summary_csv_path}'")
+        print("Subnet summary saved as 'subnet_summarry.csv'")
         
     except Exception as e:
         print(f"Error exporting reports: {e}")
